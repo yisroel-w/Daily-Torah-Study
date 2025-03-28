@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Jewish Study - Chitas and Rambam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=Noto+Sans+Hebrew:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="api-styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Daily Jewish Study</h1>
+                <div class="date-display">
+                    <span id="gregorian-date">Loading date...</span>
+                    <span class="separator">•</span>
+                    <span id="hebrew-date">Loading Hebrew date...</span>
+                </div>
+            </div>
+            <div class="settings">
+                <button id="toggle-lang" class="btn-setting">Hebrew/English</button>
+                <button id="toggle-theme" class="btn-setting">Light/Dark</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="primary-content">
+            <!-- Chitas Section -->
+            <section class="study-card chitas-card">
+                <h2 class="section-title">Chitas - Daily Study</h2>
+                <div class="study-content">
+                    <!-- Chumash -->
+                    <div class="study-item">
+                        <h3 class="item-title">
+                            <span class="he">חומש</span>
+                            <span class="en">Chumash</span>
+                        </h3>
+                        <div class="item-reference" id="chumash-ref">Loading...</div>
+                        <div class="item-actions">
+                            <button class="btn-view" id="view-chumash">View Full Text</button>
+                        </div>
+                    </div>
+
+                    <!-- Tehillim -->
+                    <div class="study-item">
+                        <h3 class="item-title">
+                            <span class="he">תהילים</span>
+                            <span class="en">Tehillim</span>
+                        </h3>
+                        <div class="item-reference" id="tehillim-ref">Loading...</div>
+                        <div class="item-actions">
+                            <button class="btn-view" id="view-tehillim">View Full Text</button>
+                        </div>
+                    </div>
+
+                    <!-- Tanya -->
+                    <div class="study-item">
+                        <h3 class="item-title">
+                            <span class="he">תניא</span>
+                            <span class="en">Tanya</span>
+                        </h3>
+                        <div class="item-reference" id="tanya-ref">Loading...</div>
+                        <div class="item-actions">
+                            <button class="btn-view" id="view-tanya">View Full Text</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rambam Section -->
+            <section class="study-card rambam-card">
+                <h2 class="section-title">Daily Rambam</h2>
+                <div class="study-content">
+                    <!-- One Chapter Cycle -->
+                    <div class="study-item">
+                        <h3 class="item-title">
+                            <span class="he">הרמב"ם היומי</span>
+                            <span class="en">One Chapter Cycle</span>
+                        </h3>
+                        <div class="item-reference" id="rambam-1-ref">Loading...</div>
+                        <div class="item-actions">
+                            <button class="btn-view" id="view-rambam-1">View Full Text</button>
+                        </div>
+                    </div>
+
+                    <!-- Three Chapter Cycle -->
+                    <div class="study-item">
+                        <h3 class="item-title">
+                            <span class="he">הרמב"ם היומי (3 פרקים)</span>
+                            <span class="en">Three Chapter Cycle</span>
+                        </h3>
+                        <div class="item-reference" id="rambam-3-ref">Loading...</div>
+                        <div class="item-actions">
+                            <button class="btn-view" id="view-rambam-3">View Full Text</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="secondary-content">
+            <h2>Other Daily Study</h2>
+            <div class="accordion" id="other-daily-study">
+                <!-- Will be populated by JavaScript -->
+                <div class="loading-message">Loading other daily study materials...</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Text Viewer Modal -->
+    <div id="text-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Text Title</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="text-content" class="text-content">
+                    <!-- Text content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Content provided by <a href="https://www.sefaria.org" target="_blank">Sefaria</a>, a living library of Jewish texts.</p>
+            <p>This website is not affiliated with Sefaria and is created for educational purposes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

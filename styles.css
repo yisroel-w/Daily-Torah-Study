@@ -1,0 +1,367 @@
+/* Main Styles for Daily Jewish Study Website */
+
+/* Variables */
+:root {
+    /* Colors */
+    --primary-color: #1C3C7C;
+    --secondary-color: #D4AF37;
+    --background-color: #F9F7F0;
+    --text-color: #333333;
+    --header-color: #000000;
+    --light-gray: #e0e0e0;
+    --white: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    
+    /* Typography */
+    --header-font: 'Frank Ruhl Libre', serif;
+    --body-font: 'Open Sans', sans-serif;
+    --hebrew-font: 'Noto Sans Hebrew', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    
+    /* Border Radius */
+    --border-radius: 8px;
+}
+
+/* Dark Theme */
+.dark-theme {
+    --primary-color: #3a5fad;
+    --secondary-color: #f0c14b;
+    --background-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --header-color: #ffffff;
+    --light-gray: #333333;
+    --white: #222222;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--header-font);
+    color: var(--header-color);
+    margin-bottom: var(--spacing-md);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+.he {
+    font-family: var(--hebrew-font);
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-lg) 0;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--white);
+    margin-bottom: var(--spacing-sm);
+}
+
+.date-display {
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+}
+
+.separator {
+    margin: 0 var(--spacing-sm);
+}
+
+.settings {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.btn-setting {
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-setting:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* Main Content */
+main {
+    padding: var(--spacing-xl) 0;
+}
+
+.primary-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Study Cards */
+.study-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px var(--shadow-color);
+    overflow: hidden;
+}
+
+.section-title {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-md);
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.study-content {
+    padding: var(--spacing-md);
+}
+
+.study-item {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.study-item:last-child {
+    border-bottom: none;
+}
+
+.item-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-sm);
+}
+
+.item-reference {
+    margin-bottom: var(--spacing-md);
+}
+
+.item-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-view {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-view:hover {
+    background-color: #c09c30;
+}
+
+/* Chitas Card Specific */
+.chitas-card .section-title {
+    background-color: var(--primary-color);
+}
+
+/* Rambam Card Specific */
+.rambam-card .section-title {
+    background-color: #4a6da7;
+}
+
+/* Secondary Content */
+.secondary-content {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px var(--shadow-color);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.secondary-content h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Accordion */
+.accordion-item {
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    padding: var(--spacing-md);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.accordion-content {
+    padding: 0 var(--spacing-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content.active {
+    max-height: 500px;
+    padding: var(--spacing-md);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 10% auto;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.close-modal {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.text-content {
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Loading State */
+.loading-message {
+    text-align: center;
+    padding: var(--spacing-lg);
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .primary-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .item-title {
+        flex-direction: column;
+    }
+    
+    .item-title .he {
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+}

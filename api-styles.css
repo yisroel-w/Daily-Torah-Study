@@ -1,0 +1,111 @@
+/* Additional CSS for API Integration */
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    color: white;
+}
+
+.loading-spinner {
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 5px solid var(--secondary-color);
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Text Display */
+.text-container {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.text-container.hebrew {
+    direction: rtl;
+    font-family: var(--hebrew-font);
+}
+
+.chapter {
+    margin-bottom: 20px;
+}
+
+.verse {
+    margin-bottom: 10px;
+}
+
+.verse-num {
+    font-weight: bold;
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+.text-container.hebrew .verse-num {
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+.he {
+    font-family: var(--hebrew-font);
+    direction: rtl;
+}
+
+/* Error Message */
+.error-message {
+    background-color: #ffdddd;
+    color: #d8000c;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+/* Success Message */
+.success-message {
+    background-color: #ddffdd;
+    color: #4F8A10;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+/* Ref Title */
+.ref-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.ref-source {
+    font-style: italic;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Modal Enhancements */
+.modal-content {
+    max-height: 80vh;
+}
+
+.text-content {
+    max-height: calc(80vh - 100px);
+    overflow-y: auto;
+    padding: 10px;
+}
